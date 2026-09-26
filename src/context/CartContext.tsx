@@ -42,6 +42,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
       }
       return [...prev, { item, quantity: 1 }];
     });
+    setIsOpen(true);
   }, []);
 
   const decrement = useCallback((id: string) => {
